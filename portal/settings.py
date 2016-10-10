@@ -82,7 +82,7 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mysite',
+        'NAME': 'portal',
         'USER': 'django',
         'PASSWORD': '123qweASD',
     }
