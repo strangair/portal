@@ -7,12 +7,13 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django import forms
 
-@login_required
+
 
 class AuthForm(forms.Form):
     login = forms.CharField(widget=forms.EmailInput)
     password = forms.CharField(widget=forms.PasswordInput)
-
+    
+@login_required
 def main_page(request):
 
     # Redirect to login page
