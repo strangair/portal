@@ -4,8 +4,10 @@ from django.template.loader import get_template
 from django.template import Context
 
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 from django import forms
 
+@login_required
 
 class AuthForm(forms.Form):
     login = forms.CharField(widget=forms.EmailInput)
@@ -14,8 +16,8 @@ class AuthForm(forms.Form):
 def main_page(request):
 
     # Redirect to login page
-    if not request.user.is_authenticated():
-        return HttpResponseRedirect('/client/login/')
+#    if not request.user.is_authenticated():
+#        return HttpResponseRedirect('/client/login/')
 
     t = get_template('client_main.html')
     html = t.render(Context())
