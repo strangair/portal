@@ -4,4 +4,5 @@ from client import views
 
 urlpatterns = [
     url(r'^$', views.main_page, name='Client main'),
+
 ]

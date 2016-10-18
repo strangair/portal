@@ -19,7 +19,7 @@ from django.contrib import admin
 from portal import views
 
 urlpatterns = [
-#    url(r'^admin/', admin.site.urls),
     url(r'^$', views.main_page, name='main'),
     url(r'^client/', include('client.urls')),
+    url(r'^accounts/', include('accounts.urls')),
 ]
