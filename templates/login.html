@@ -21,10 +21,9 @@
 
     <form action='/accounts/reg/' method='post'>
         {% csrf_token %}
-        
+
         {% if form.errors %}
-        <p style=”color: red;”>Исправьте следующие ошибки: {{ form.errors|pluralize }}
-        </p>
+        <p style=”color: red;”>Исправьте следующие ошибки: {{ form.errors|pluralize }} </p>
         {% endif %}
 
         <label for="password">Почта (login): </label>

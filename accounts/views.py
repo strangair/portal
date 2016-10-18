@@ -21,3 +21,5 @@ def registration(request):
                 return render_to_response('login.html', {'error': form.errors})
         else:
             return render_to_response('login.html', {'error': form.errors})
+    else:
+        return render_to_response('login.html', {'error': form.errors})
