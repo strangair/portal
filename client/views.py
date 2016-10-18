@@ -11,16 +11,8 @@ from django import forms
 # Redirect to login page /accounts/login/
 @login_required
 def main_page(request):
-    username = request.POST.get('username', '')
-    password = request.POST.get('password', '')
+    return HttpResponseRedirect('/client/')
 
-    user = auth.authenticate(username=username, password=password)
-
-    if user is not None and user.is_active:
-        auth.login(request, user)
-        return HttpResponseRedirect('/client/')
-    else:
-        return HttpResponseRedirect('/accounts/login/')
 
 
 
