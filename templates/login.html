@@ -21,20 +21,14 @@
 
     <form action='/accounts/reg/' method='post'>
         {% csrf_token %}
-        <label for="username">Имя пользователя:</label>
-        <input type="text" name="username" id="username">
-        <br>
-        <label for="password">Почта: </label>
-        <input type="email" name="email" id="email">
+        <label for="password">Почта (login): </label>
+        <input type="email" name="username" id="username">
         <label for="password">Пароль: </label>
         <input type="password" name="password" id="password">
         <br>
         <input type="submit" value="login" />
         <input type="hidden" name="next" value="{{ next|escape }}" />
     </form>
-
-
-
 
 
 {% endblock %}
