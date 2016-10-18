@@ -11,7 +11,7 @@ from django import forms
 # Redirect to login page /accounts/login/
 @login_required
 def main_page(request):
-    return HttpResponseRedirect('/client/')
+    return render_to_response('client_main.html')
 
 
 
