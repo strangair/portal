@@ -13,7 +13,7 @@
     <b>login</b>
     <form action='' method='post'>
         {% csrf_token %}
-        <table border="0">
+        <table border="1">
           <tr>
             <td>
               <label for="username">Имя пользователя:</label>
@@ -48,7 +48,7 @@
         {% if form.errors %}
         <p style=”color: red;”>Исправьте следующие ошибки: {{ form.errors|pluralize }} </p>
         {% endif %}
-        <table border="0">
+        <table border="1">
           <tr>
             <td>
               <label for="password">Почта (login): </label>
@@ -68,7 +68,7 @@
           </tr>
 
           <tr>
-            <input type="submit" value="login" />
+            <input type="submit" value="Register" />
             <input type="hidden" name="next" value="{{ next|escape }}" />
           </tr>
         </table>
