@@ -7,10 +7,10 @@
         <p class=”error” style="color:red;">Неверное имя или пароль</p>
     {% endif %}
 
-<table border="0">
+<table border="1">
 <tr>
   <td>
-login
+    <b>login</b>
     <form action='' method='post'>
         {% csrf_token %}
         <label for="username">Имя пользователя:</label>
@@ -23,7 +23,7 @@ login
     <br><br><br><hr>
   </td>
   <td>
-registration
+    <b>registration</b>
     <form action='/accounts/reg/' method='post'>
         {% csrf_token %}
 
