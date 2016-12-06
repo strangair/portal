@@ -30,11 +30,12 @@
             <td>
               <input type="password" name="password" id="password">
             </td>
-            <td>
-              <input type="submit" value="login" />
-            </td>
           </tr>
+
+          <tr>
+            <input type="submit" value="login" />
             <input type="hidden" name="next" value="{{ next|escape }}" />
+          </tr>
           </table>
     </form>
   </td>
@@ -47,13 +48,30 @@
         {% if form.errors %}
         <p style=”color: red;”>Исправьте следующие ошибки: {{ form.errors|pluralize }} </p>
         {% endif %}
+        <table border="0">
+          <tr>
+            <td>
+              <label for="password">Почта (login): </label>
+            </td>
+            <td>
+              <input type="email" name="username" id="username">
+            </td>
+          </tr>
 
-        <label for="password">Почта (login): </label>
-        <input type="email" name="username" id="username"><br>
-        <label for="password">Пароль: </label>
-        <input type="password" name="password" id="password"><br>
-        <input type="submit" value="login" />
-        <input type="hidden" name="next" value="{{ next|escape }}" />
+          <tr>
+            <td>
+              <label for="password">Пароль: </label>
+            </td>
+            <td>
+              <input type="password" name="password" id="password">
+            </td>
+          </tr>
+
+          <tr>
+            <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next|escape }}" />
+          </tr>
+        </table>
     </form>
   </td>
 </tr>
