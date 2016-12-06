@@ -7,13 +7,13 @@
         <p class=”error” style="color:red;">Неверное имя или пароль</p>
     {% endif %}
 
-<table border="1">
+<table border="0">
 <tr>
   <td>
-    <b>login</b>
+    <b>login</b><br>
     <form action='' method='post'>
         {% csrf_token %}
-        <table border="1">
+        <table border="0">
           <tr>
             <td>
               <label for="username">Имя пользователя:</label>
@@ -33,22 +33,24 @@
           </tr>
 
           <tr>
-            <input type="submit" value="login" />
-            <input type="hidden" name="next" value="{{ next|escape }}" />
+            <td>
+              <input type="submit" value="login" />
+              <input type="hidden" name="next" value="{{ next|escape }}" />
+            </td>
           </tr>
           </table>
     </form>
   </td>
 
   <td>
-    <b>registration</b>
+    <b>registration</b><br>
     <form action='/accounts/reg/' method='post'>
         {% csrf_token %}
 
         {% if form.errors %}
         <p style=”color: red;”>Исправьте следующие ошибки: {{ form.errors|pluralize }} </p>
         {% endif %}
-        <table border="1">
+        <table border="0">
           <tr>
             <td>
               <label for="password">Почта (login): </label>
