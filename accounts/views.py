@@ -18,7 +18,6 @@ def registration(request):
             user = User.objects.create_user(username=data['username'], password=data['password'])
             user.save()
 
-#            user = auth.authenticate(username=data['username'], password=data['password'])
             if user is not None and user.is_active:
                 return HttpResponseRedirect('/client/')
             else:
