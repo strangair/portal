@@ -15,7 +15,8 @@ def registration(request):
         form = AuthForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            user = User.objects.create_user(username=data['username'], password=data['password'])
+            user = User.objects.create_user(username=data['username'], password=data['password'], \
+            first_name=data['first_name'], last_name=data['last_name'])
             user.save()
 
             if user is not None and user.is_active:
